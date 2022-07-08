@@ -1,4 +1,5 @@
 ﻿using HFRM_BARCODEGENERATOR.UI.CustomMessageBoxes;
+using QRCoder;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,6 +40,15 @@ namespace HFRM_BARCODEGENERATOR
         {
             exit.ShowDialog();
 
+        }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(txtInput.Text, QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrCodeData);
+            Bitmap qrCodeImage = qrCode.GetGraphic(2);
+            pctOutput.Image = qrCodeImage;
         }
     }
 }

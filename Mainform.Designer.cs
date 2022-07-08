@@ -30,18 +30,18 @@
         {
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.formEllipse = new HFRM_BARCODEGENERATOR.UI.Components.Ellipse();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.formEllipse = new HFRM_BARCODEGENERATOR.UI.Components.Ellipse();
+            this.txtInput = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnGenerate = new System.Windows.Forms.Button();
+            this.pctOutput = new System.Windows.Forms.PictureBox();
             this.pnlTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctOutput)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitleBar
@@ -69,63 +69,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "FOR IT ASSETS OF HEALTHIER FIT CO. LTD.";
             // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.lblTitle.Location = new System.Drawing.Point(12, 9);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(256, 27);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "BARCODE GENERATOR";
-            // 
-            // formEllipse
-            // 
-            this.formEllipse.CornerRadius = 30;
-            this.formEllipse.TargetControl = this;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 87);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(297, 64);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "STRING";
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(273, 175);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 41);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "SAVE";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(162, 175);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 41);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "GENERATE";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::HFRM_BARCODEGENERATOR.Properties.Resources.QR;
-            this.pictureBox1.Location = new System.Drawing.Point(315, 87);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnMinimize
             // 
             this.btnMinimize.Image = global::HFRM_BARCODEGENERATOR.Properties.Resources.minimize;
@@ -151,16 +94,76 @@
             this.btnExit.Zoom = 10;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.lblTitle.Location = new System.Drawing.Point(12, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(256, 27);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "BARCODE GENERATOR";
+            // 
+            // formEllipse
+            // 
+            this.formEllipse.CornerRadius = 30;
+            this.formEllipse.TargetControl = this;
+            // 
+            // txtInput
+            // 
+            this.txtInput.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInput.Location = new System.Drawing.Point(6, 87);
+            this.txtInput.Multiline = true;
+            this.txtInput.Name = "txtInput";
+            this.txtInput.Size = new System.Drawing.Size(297, 72);
+            this.txtInput.TabIndex = 3;
+            this.txtInput.Text = "STRING";
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(273, 175);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(105, 41);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "SAVE";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnGenerate
+            // 
+            this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerate.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerate.Location = new System.Drawing.Point(162, 175);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(105, 41);
+            this.btnGenerate.TabIndex = 4;
+            this.btnGenerate.Text = "GENERATE";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            // 
+            // pctOutput
+            // 
+            this.pctOutput.Image = global::HFRM_BARCODEGENERATOR.Properties.Resources.qrrrr;
+            this.pctOutput.ImageLocation = "";
+            this.pctOutput.Location = new System.Drawing.Point(309, 87);
+            this.pctOutput.Name = "pctOutput";
+            this.pctOutput.Size = new System.Drawing.Size(75, 72);
+            this.pctOutput.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctOutput.TabIndex = 1;
+            this.pctOutput.TabStop = false;
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(390, 228);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtInput);
+            this.Controls.Add(this.pctOutput);
             this.Controls.Add(this.pnlTitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Mainform";
@@ -168,9 +171,9 @@
             this.Text = "Form1";
             this.pnlTitleBar.ResumeLayout(false);
             this.pnlTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctOutput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,9 +187,9 @@
         private Bunifu.Framework.UI.BunifuImageButton btnExit;
         private Bunifu.Framework.UI.BunifuImageButton btnMinimize;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtInput;
+        private System.Windows.Forms.PictureBox pctOutput;
+        private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.Button button2;
     }
 }
