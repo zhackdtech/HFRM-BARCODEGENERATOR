@@ -68,12 +68,6 @@
     <Compile Include="UI\Components\Ellipse.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\CustomMessageBoxes\ExitConfirmation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\CustomMessageBoxes\ExitConfirmation.Designer.cs">
-      <DependentUpon>ExitConfirmation.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Mainform.resx">
       <DependentUpon>Mainform.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,9 +81,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\CustomMessageBoxes\ExitConfirmation.resx">
-      <DependentUpon>ExitConfirmation.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

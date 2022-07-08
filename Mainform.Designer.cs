@@ -33,12 +33,13 @@
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.formEllipse = new HFRM_BARCODEGENERATOR.UI.Components.Ellipse();
             this.txtInput = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSve = new System.Windows.Forms.Button();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.pctOutput = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtFileName = new System.Windows.Forms.TextBox();
+            this.formEllipse = new HFRM_BARCODEGENERATOR.UI.Components.Ellipse();
             this.pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
@@ -81,6 +82,7 @@
             this.btnMinimize.TabIndex = 1;
             this.btnMinimize.TabStop = false;
             this.btnMinimize.Zoom = 10;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnExit
             // 
@@ -106,32 +108,27 @@
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "BARCODE GENERATOR";
             // 
-            // formEllipse
-            // 
-            this.formEllipse.CornerRadius = 30;
-            this.formEllipse.TargetControl = this;
-            // 
             // txtInput
             // 
             this.txtInput.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInput.Location = new System.Drawing.Point(24, 87);
             this.txtInput.Multiline = true;
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(297, 120);
-            this.txtInput.TabIndex = 3;
-            this.txtInput.Text = "STRING";
+            this.txtInput.Size = new System.Drawing.Size(297, 91);
+            this.txtInput.TabIndex = 0;
+            this.txtInput.Text = "QRCODE";
             // 
-            // button2
+            // btnSve
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(340, 230);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 41);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "SAVE";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSve.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSve.Location = new System.Drawing.Point(340, 230);
+            this.btnSve.Name = "btnSve";
+            this.btnSve.Size = new System.Drawing.Size(105, 41);
+            this.btnSve.TabIndex = 4;
+            this.btnSve.Text = "SAVE";
+            this.btnSve.UseVisualStyleBackColor = true;
+            this.btnSve.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnGenerate
             // 
@@ -163,6 +160,21 @@
             this.panel1.Size = new System.Drawing.Size(118, 120);
             this.panel1.TabIndex = 6;
             // 
+            // txtFileName
+            // 
+            this.txtFileName.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFileName.Location = new System.Drawing.Point(24, 180);
+            this.txtFileName.Multiline = true;
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(297, 27);
+            this.txtFileName.TabIndex = 1;
+            this.txtFileName.Text = "FILENAME";
+            // 
+            // formEllipse
+            // 
+            this.formEllipse.CornerRadius = 30;
+            this.formEllipse.TargetControl = this;
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,7 +183,8 @@
             this.ClientSize = new System.Drawing.Size(465, 283);
             this.Controls.Add(this.pctOutput);
             this.Controls.Add(this.btnGenerate);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSve);
+            this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.txtInput);
             this.Controls.Add(this.pnlTitleBar);
             this.Controls.Add(this.panel1);
@@ -199,9 +212,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtInput;
         private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSve;
         private System.Windows.Forms.PictureBox pctOutput;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtFileName;
     }
 }
 

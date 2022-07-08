@@ -1,5 +1,4 @@
 ﻿using HFRM_BARCODEGENERATOR.Properties;
-using HFRM_BARCODEGENERATOR.UI.CustomMessageBoxes;
 using QRCoder;
 using System;
 using System.Collections.Generic;
@@ -41,13 +40,16 @@ namespace HFRM_BARCODEGENERATOR
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-        ExitConfirmation exit = new ExitConfirmation();
         private void btnExit_Click(object sender, EventArgs e)
         {
-            exit.ShowDialog();
-
+            Environment.Exit(Environment.ExitCode = 0);
         }
         Bitmap qrCodeImage;
+        Bitmap QRCodeImage
+        {
+            get => qrCodeImage;
+            set => qrCodeImage = value;
+        }
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
@@ -56,6 +58,10 @@ namespace HFRM_BARCODEGENERATOR
              qrCodeImage = qrCode.GetGraphic(4);
             pctOutput.Image = qrCodeImage;
 
+            
+        }
+        private void SaveToJpg(String file)
+        {
             var dialog = new SaveFileDialog
             {
                 Filter = "JPG IMAGES | *.jpg,*.jpeg"
@@ -63,20 +69,20 @@ namespace HFRM_BARCODEGENERATOR
             //var userDir = new DirectoryInfo(Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile));
             //Directory.CreateDirectory(userDir.FullName+"/Documents/Barcodes/"+filename);
             //Debug.Write(userDir);
-            dialog.FileName = "dick";
+            dialog.FileName = file;
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                qrCodeImage.Save(dialog.FileName, ImageFormat.Jpeg);
+                QRCodeImage.Save(dialog.FileName, ImageFormat.Jpeg);
             }
-        }
-        private void SaveToJpg(String file)
-        {
-            
-
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            SaveToJpg("dick");
+            SaveToJpg(txtFileName.Text);
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
         //public static Bitmap CreateBitmap(string text, int height, int width, Color foregroundColor, Color backgroundColor, string fontName, int fontSize, bool antialias)
         //{
