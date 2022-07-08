@@ -47,7 +47,7 @@ namespace HFRM_BARCODEGENERATOR
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(txtInput.Text, QRCodeGenerator.ECCLevel.Q);
             QRCode qrCode = new QRCode(qrCodeData);
-            Bitmap qrCodeImage = qrCode.GetGraphic(2);
+            Bitmap qrCodeImage = qrCode.GetGraphic(4);
             pctOutput.Image = qrCodeImage;
         }
     }

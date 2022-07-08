@@ -54,7 +54,7 @@
             this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitleBar.Location = new System.Drawing.Point(0, 0);
             this.pnlTitleBar.Name = "pnlTitleBar";
-            this.pnlTitleBar.Size = new System.Drawing.Size(390, 60);
+            this.pnlTitleBar.Size = new System.Drawing.Size(465, 60);
             this.pnlTitleBar.TabIndex = 0;
             this.pnlTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitleBar_MouseDown);
             // 
@@ -73,7 +73,7 @@
             // 
             this.btnMinimize.Image = global::HFRM_BARCODEGENERATOR.Properties.Resources.minimize;
             this.btnMinimize.ImageActive = null;
-            this.btnMinimize.Location = new System.Drawing.Point(306, 14);
+            this.btnMinimize.Location = new System.Drawing.Point(380, 14);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(32, 32);
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -85,7 +85,7 @@
             // 
             this.btnExit.Image = global::HFRM_BARCODEGENERATOR.Properties.Resources.exit;
             this.btnExit.ImageActive = null;
-            this.btnExit.Location = new System.Drawing.Point(347, 14);
+            this.btnExit.Location = new System.Drawing.Point(421, 14);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(32, 32);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -113,10 +113,10 @@
             // txtInput
             // 
             this.txtInput.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInput.Location = new System.Drawing.Point(6, 87);
+            this.txtInput.Location = new System.Drawing.Point(24, 87);
             this.txtInput.Multiline = true;
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(297, 72);
+            this.txtInput.Size = new System.Drawing.Size(297, 120);
             this.txtInput.TabIndex = 3;
             this.txtInput.Text = "STRING";
             // 
@@ -124,7 +124,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(273, 175);
+            this.button2.Location = new System.Drawing.Point(340, 230);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 41);
             this.button2.TabIndex = 4;
@@ -135,7 +135,7 @@
             // 
             this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerate.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerate.Location = new System.Drawing.Point(162, 175);
+            this.btnGenerate.Location = new System.Drawing.Point(229, 230);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(105, 41);
             this.btnGenerate.TabIndex = 4;
@@ -146,12 +146,11 @@
             // pctOutput
             // 
             this.pctOutput.Image = global::HFRM_BARCODEGENERATOR.Properties.Resources.qrrrr;
-            this.pctOutput.ImageLocation = "";
-            this.pctOutput.Location = new System.Drawing.Point(309, 87);
+            this.pctOutput.Location = new System.Drawing.Point(327, 87);
             this.pctOutput.Name = "pctOutput";
-            this.pctOutput.Size = new System.Drawing.Size(75, 72);
-            this.pctOutput.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctOutput.TabIndex = 1;
+            this.pctOutput.Size = new System.Drawing.Size(118, 120);
+            this.pctOutput.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pctOutput.TabIndex = 5;
             this.pctOutput.TabStop = false;
             // 
             // Mainform
@@ -159,11 +158,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(390, 228);
+            this.ClientSize = new System.Drawing.Size(465, 283);
+            this.Controls.Add(this.pctOutput);
             this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtInput);
-            this.Controls.Add(this.pctOutput);
             this.Controls.Add(this.pnlTitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Mainform";
@@ -188,9 +187,9 @@
         private Bunifu.Framework.UI.BunifuImageButton btnMinimize;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtInput;
-        private System.Windows.Forms.PictureBox pctOutput;
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pctOutput;
     }
 }
 
